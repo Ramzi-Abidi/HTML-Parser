@@ -17,7 +17,6 @@ These instructions will help you set up and run the project locally for developm
 
     ```bash
     git clone https://github.com/Ramzi-Abidi/HTML-Parser.git
-    cd web-scraper-api
     ```
 
 2. Install deps:
@@ -89,3 +88,9 @@ Accepts a JSON body:
         ]
     }
    ```
+
+### Demo
+
+https://github.com/user-attachments/assets/c473fd0a-99ea-4582-99f2-7f8cd6f1af62
+
+
