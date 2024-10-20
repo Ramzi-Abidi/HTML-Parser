@@ -28,6 +28,7 @@ These instructions will help you set up and run the project locally for developm
 
 3. Run
     ```bash
+    Build: npm run build
     Start: npm run dev
     Test: npm test
     ```
