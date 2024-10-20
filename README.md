@@ -1,4 +1,4 @@
-# Web Scraper API with Node.js and Express
+# Web Scraper API with Node and Express
 
 REST api built using TS, Node/Express, and Cheerio. The API allows users to extract data from an HTML files based on CSS selectors provided via JSON. The scraper reads a local HTML file, processes it, and returns the scraped data as a JSON response.
 
@@ -34,7 +34,7 @@ These instructions will help you set up and run the project locally for developm
 
 ### Endpoints
 
-There are currently two endpoints.
+There is one endpoint.
 
 3. `POST /extract` scrape data from index.html file.
 
