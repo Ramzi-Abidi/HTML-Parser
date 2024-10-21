@@ -94,4 +94,19 @@ Accepts a JSON body:
 
 https://github.com/user-attachments/assets/c473fd0a-99ea-4582-99f2-7f8cd6f1af62
 
+To enable the functionality for users to upload an HTML file via request, you can switch to the feature branch:
+
+```bash
+git checkout feat/upload-html-file
+npm i
+npm run dev
+```
+
+This branch includes the necessary updates to handle HTML file uploads and validate the file type.
+
+Make sure to install any required dependencies before running the app.
+
+### Demo - Upload html file support
+
+https://github.com/user-attachments/assets/561ba0bc-dd21-4531-a275-fd8bdba7d207
 
