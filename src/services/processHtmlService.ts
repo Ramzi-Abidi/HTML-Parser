@@ -1,14 +1,11 @@
-import { readFile } from "fs/promises";
 import * as cheerio from "cheerio";
 import { CssCode, ExtractResult } from "../types";
 
 export class ProcessHtmlService {
     async extractData(htmlCode: string, cssCode: CssCode): Promise<ExtractResult> {
         try {
-            const html = await readFile(htmlCode, "utf-8");
             const result: ExtractResult = {};
-
-            const $ = cheerio.load(html);
+            const $ = cheerio.load(htmlCode);
             for (const [key, selector] of Object.entries(cssCode)) {
                 if (typeof selector === "string") {
                     result[key] = this.extractDirectElements($, selector);
@@ -19,6 +16,7 @@ export class ProcessHtmlService {
 
             return result;
         } catch (err) {
+            console.log(err);
             throw new Error("Error occurred while extracting data.");
         }
     }

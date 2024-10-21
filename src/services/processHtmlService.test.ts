@@ -1,5 +1,6 @@
 import path from "path";
 import { ProcessHtmlService } from "../services/processHtmlService";
+import {readFile} from "fs/promises";
 
 describe("Process html api", () => {
     test("Extract html: Example 1", async () => {
@@ -13,7 +14,8 @@ describe("Process html api", () => {
             __dirname,
             path.join("../data/index.html"),
         );
-        const r = await service.extractData(htmlCode, cssCode);
+        const html = await readFile(htmlCode, "utf-8");
+        const r = await service.extractData(html, cssCode);
         expect(r).toBeTruthy();
         expect(r).toEqual({
             title: "This is the title of the page",
@@ -34,7 +36,8 @@ describe("Process html api", () => {
             __dirname,
             path.join("../data/index.html"),
         );
-        const r = await service.extractData(htmlCode, cssCode);
+        const html = await readFile(htmlCode, "utf-8");
+        const r = await service.extractData(html, cssCode);
         expect(r).toBeTruthy();
         expect(r).toEqual({
             firstParagraph:
@@ -65,7 +68,8 @@ describe("Process html api", () => {
             __dirname,
             path.join("../data/index.html"),
         );
-        const r = await service.extractData(htmlCode, cssCode);
+        const html = await readFile(htmlCode, "utf-8");
+        const r = await service.extractData(html, cssCode);
         expect(r).toBeTruthy();
         expect(r).toEqual({
             title: "This is the title of the page",
